@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sag galaxy</title>
+    <!-- ربط خط Cairo من جوجل -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- القائمة العلوية -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">sag galaxy</a>
+            <ul class="nav-links">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#about">ماذا نبيع</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- الواجهة الترحيبية الهيرو -->
+    <section>
+        <h2>براويز جديده </h2>
+        <p>نحن هنا لنقدم  افضل البراويز التي تعطي للاماكن شكل مميز للبيئه المحيطه به</p>
+        <img src="sag1.jpg" alt="">
+        <a href="#contact" class="btn">تواصل معنا الآن</a>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">ماذا نبيع</h2>
+        <div class="about-content">
+            <p>يوجد لدينا افضل انواع البراويز لكم لكي لا تتلف ونختار لكم افضل انواع الطباعه و البراويز ونهتم بالتغليف الكامل </p>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">خدماتنا </h2>
+            <div class="grid-container">
+                <!-- خدمة 1 -->
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>بيع البراويز الجديده والراقيه</h3>
+                    <p>يوجد لدينا جميع المقاسات</p>
+                    <img src="sag2.jpg" alt="">
+                </div>
+                <!-- خدمة 2 -->
+                <div class="card">
+                    <section>
+                    <hr>
+                    <div class="card-icon">🚀</div>
+                    <h3>براويز حائط مودرن</h3>
+                    <p>مجموعه براويز تناسب الغرف والاماكن المفتوحه و المطاعم</p>
+                    <img src="sag4.jpg" alt="">
+                    </section>
+                </div>
+                <!-- خدمة 3 -->
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <hr>
+                    <h3>تفصيل بمقاسات خاصه</h3>
+                    <p>اختيار جوده الزجاج ونوع البراويز </p>
+                    <img src="sag3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل فورمة كاملة -->
+    <section id="contact">
+        <h2 class="section-title">تواصل معنا</h2>
+        <form class="contact-form" id="mainContactForm">
+            <div class="form-group">
+                <label for="name">الاسم بالكامل</label>
+                <input type="text" id="name" required placeholder="أدخل اسمك الكريم">
+            </div>
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" required placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="message">رسالتك</label>
+                <textarea id="message" rows="5" required placeholder="اكتب تفاصيل رسالتك هنا..."></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn">إرسال الرسالة</button>
+        </form>
+    </section>
+
+    <!-- الفوتر السفلي للموقع -->
+    <footer>
+        <p>جميع الحقوق محفوظة © <span id="currentYear"></span> | تم التطوير بواسطة مبرمج الموقع</p>
+    </footer>
+
+    <!-- جافا سكريبت بسيطة لتشغيل الفوتر والفورم -->
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        document.getElementById('mainContactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`شكراً لتواصلك معنا يا ${name}! تم إرسال رسالتك بنجاح.`);
+            this.reset();
+        });
+    </script>
+    <section>
+<a href="01552718649"><button>للطلب اضغط هنا</button></a>
+    </section>
+</body>
+</html>
